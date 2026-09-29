@@ -13,7 +13,9 @@ jobs:
           java-version: '25'
       - name: Build
         run: mvn -B clean package
+      - name: Flatten jar
+        run: cp target/GemsSMP-*.jar GemsSMP.jar
       - uses: actions/upload-artifact@v4
         with:
           name: GemsSMP-jar
-          path: target/GemsSMP-*.jar
+          path: GemsSMP.jar
