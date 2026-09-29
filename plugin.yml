@@ -1,0 +1,14 @@
+name: GemsSMP
+version: 2.0.0
+main: dev.gems.GemsPlugin
+api-version: '26.2'
+description: Gems mit Abilities (Burn, Stun, Damage, ...) und Leveln
+# Die Commands (/gem ...) werden im Code über Paper's Brigadier-API registriert,
+# deshalb gibt es hier bewusst keinen "commands:"-Block.
+permissions:
+  gems.use:
+    description: Gems benutzen, /gem info, /gem ability
+    default: true
+  gems.admin:
+    description: Admin-Befehle (give, setlevel, addxp, reload, resetcrafts)
+    default: op

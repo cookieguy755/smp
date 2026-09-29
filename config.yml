@@ -1,0 +1,53 @@
+# ===== GemsSMP Konfiguration =====
+
+# Jeder Spieler bekommt beim ersten Join ein zufälliges GEWÖHNLICHES Gem
+# (Feuer, Stärke, Frost oder Natur). Das Amethyst-Gem gibt es nie automatisch.
+give-random-gem-on-first-join: true
+
+# Gems verschwinden beim Tod nicht (kommen beim Respawn zurück)
+keep-gems-on-death: true
+
+# Passive Effekte, solange man das Gem im Inventar hat
+passives: true
+
+# Abilities dürfen andere Spieler treffen (false = nur Mobs)
+affect-players: true
+
+# Cooldown-Reduzierung pro Level (0.05 = 5% pro Level, maximal -70%)
+cooldown-reduction-per-level: 0.05
+
+# XP bis zum nächsten Level. 4 Einträge = Level 1 -> 2 -> 3 -> 4 -> 5 (Maximallevel 5)
+xp-per-level: [100, 250, 500, 900]
+
+# Multiplikator auf die nötigen XP pro Gem (seltene Gems leveln langsamer)
+xp-multiplier:
+  amethyst: 2.5
+
+xp:
+  ability-use: 2     # XP pro erfolgreicher Ability (für das benutzte Gem)
+  kill-player: 40    # XP pro Spieler-Kill (für alle Gems im Inventar)
+  kill-mob: 3        # XP pro Monster-Kill (für alle Gems im Inventar)
+
+# Das Amethyst-Gem: das seltenste und stärkste Gem
+amethyst:
+  craftable: true            # per Rezept herstellbar
+  max-crafts: 3              # insgesamt so oft auf dem Server herstellbar (-1 = unbegrenzt)
+  drop-on-pvp-death: true    # wird fallen gelassen, wenn der Besitzer von einem Spieler getötet wird
+
+# Basis-Cooldowns in Sekunden (bei Level 1)
+cooldowns:
+  fire:
+    ability1: 25     # Burn
+    ability2: 20     # Flame Beam
+  strength:
+    ability1: 25     # Smash
+    ability2: 45     # Rage
+  frost:
+    ability1: 30     # Stun
+    ability2: 25     # Frost Nova
+  nature:
+    ability1: 28     # Entangle
+    ability2: 40     # Regrowth
+  amethyst:
+    ability1: 50     # Crystal Burst
+    ability2: 75     # Crystal Aegis
